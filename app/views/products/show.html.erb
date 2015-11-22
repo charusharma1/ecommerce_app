@@ -1,0 +1,20 @@
+<%= @product.name %>
+<br>
+<%= @product.price %>
+<br>
+
+<%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
+<br>
+<%= link_to "Update", "/products/#{@product.id}/edit", method: :get %>
+
+<div>
+
+<h3> Message <%= @product.sale_message %> </h3>
+<h3> Tax: <%= @product.tax %> </h3>
+<h3> Total: <%= @product.total %> </h3>
+<h3> Supplier: <%= @product.supplier.name %> </h3>
+
+</div>
+<% @images.each do |image| %>
+<img src = "<%= image.image_url %>">
+<% end %>

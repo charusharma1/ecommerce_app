@@ -1,0 +1,17 @@
+<%=form_tag '/form_result',method: :post do%>
+<div>
+	<%= label_tag :name, "write your product name here"%>
+	<%= text_area_tag :name%>
+</div>
+<div>
+	<%= label_tag :image, "insert your image here"%>
+	<%= text_area_tag :image%>
+</div>
+<div>
+	<%= label_tag :price, "write your price here"%>
+	<%= text_area_tag :price%>
+</div>
+<div>
+	<%= submit_tag "Send message"%>
+</div>
+<% end %>
