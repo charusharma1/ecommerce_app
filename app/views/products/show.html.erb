@@ -18,3 +18,16 @@
 <% @images.each do |image| %>
 <img src = "<%= image.image_url %>">
 <% end %>
+
+<%=form_tag '/orders', method: :post do%>
+<div>
+  <%= label_tag :quantity, "insert your quantity here" %>
+  <%= text_area_tag :quantity %>
+  <%= label_tag :product_id, "insert your product_id here" %>
+  <%= text_area_tag :product_id %>
+  <%= hidden_field_tag :user_id, current_user.id %>
+</div>
+<div>
+  <%= submit_tag "Buy now!"%>
+</div>
+<% end %>

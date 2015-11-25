@@ -13,8 +13,9 @@ class ProductsController < ApplicationController
 	end
 	
 	def create
-		Product.create(name: params[:name],image: params[:image],price: params[:price])
-		redirect_to "/products/:id"
+		new_product = Product.create(name: current_user.email,price: params[:price], user_id: current_user.id)
+		Image.create(product_id: Product.last.id, image_url: params[:image_url])
+		redirect_to "/products/#{new_product.id}"
 		flash[:success] = "Created!"
 	end
 

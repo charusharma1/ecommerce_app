@@ -43,7 +43,8 @@ test:
 #   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
-#
+#production:
+   
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
@@ -52,3 +53,6 @@ production:
   database: ecommerce_app_production
   username: ecommerce_app
   password: <%= ENV['ECOMMERCE-APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+        encoding: unicode
+        pool: 5
