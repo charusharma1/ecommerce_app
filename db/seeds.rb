@@ -1,7 +1,4 @@
-User.create!([
-  {email: "charu1603@gmail.com", encrypted_password: "$2a$10$Dax22xncpBkiKBty/XMBr.uZ4dhG5WitbqwnlGLGZMorznYh/24Ki", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 2, current_sign_in_at: "2015-11-23 00:55:07", last_sign_in_at: "2015-11-23 00:05:16", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "chsharma@linkedin.com", encrypted_password: "$2a$10$NN2LJDfshZT3Sp9XKrL13eX2LiNVkESk9/lFM79n8SJnNxO9cf0Ya", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-11-23 00:46:59", last_sign_in_at: "2015-11-23 00:46:59", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
-])
+
 Image.create!([
   {product_id: 1, image_url: "http://rlv.zcache.com/super_star_kids_stickers-r154e2f8c50664169be62ceb1d347684b_v9waf_8byvr_512.jpg"},
   {product_id: 1, image_url: "https://s-media-cache-ak0.pinimg.com/236x/60/5b/76/605b7603e3b622514e783693d5c14928.jpg"},
