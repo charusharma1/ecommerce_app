@@ -1,6 +1,23 @@
 <h1>My products are: </h1>
+
+<header class="navbar  navbar-inverse">
+    <div class="navbar-class">
+      <div class="container">
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">HOME</a></li>
+          <% @categories.each do |category|%>
+          <li><%=link_to category.name, "/products/?category=#{category.name}"%></li>
+          <% end %>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+
 <table class="table table-striped">
-	<% @all_products.each do |product| %>
+	<% @products.each do |product| %>
 	<tr>
 		<td><a href="http://localhost:3000/products/<%= product.id%>"> <%=product.name %> </a></td>
 		<td><img src= "<%= product.images.first.image_url%>"></td>

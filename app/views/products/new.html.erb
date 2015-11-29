@@ -1,17 +1,32 @@
+<div>
+  <ul>
+    <% if @product && @product.errors.any? %>
+      <% @product.errors.full_messages.each do |message| %>
+        <li> <%= message %> </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
 <%=form_tag '/products', method: :post do%>
-<!-- <div>
+
+<div>
 	<%= label_tag :name, "write your product name here"%>
 	<%= text_area_tag :name%>
-</div> -->
-<div>
-	<%= label_tag :image_url, "insert your image here"%>
-	<%= text_area_tag :image_url%>
 </div>
+
+<div>
+	<%= label_tag :description, "insert your description here"%>
+	<%= text_area_tag :description%>
+</div>
+
 <div>
 	<%= label_tag :price, "write your price here"%>
 	<%= text_area_tag :price%>
 </div>
+
 <div>
 	<%= submit_tag "Send message"%>
 </div>
+
 <% end %>
